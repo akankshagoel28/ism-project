@@ -49,7 +49,7 @@ export default class Register extends React.Component {
 
         <div>
           <TextField
-            id="standard-basic"
+            class="standard-basic"
             type="text"
             autoComplete="off"
             name="username"
@@ -60,7 +60,7 @@ export default class Register extends React.Component {
           />
           <br /><br />
           <TextField
-            id="standard-basic"
+            class="standard-basic"
             type="password"
             autoComplete="off"
             name="password"
@@ -71,7 +71,7 @@ export default class Register extends React.Component {
           />
           <br /><br />
           <TextField
-            id="standard-basic"
+            class="standard-basic"
             type="password"
             autoComplete="off"
             name="confirm_password"
