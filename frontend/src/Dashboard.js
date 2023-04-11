@@ -50,7 +50,7 @@ export default class Dashboard extends Component {
     if (this.state.search) {
       data = `${data}&search=${this.state.search}`;
     }
-    axios.get(`https://lovely-jumper-dove.cyclic.app/get-product${data}`, {
+    axios.get(`https://ism-project.onrender.com/get-product${data}`, {
       headers: {
         'token': this.state.token
       }
@@ -67,7 +67,7 @@ export default class Dashboard extends Component {
   }
 
   deleteProduct = (id) => {
-    axios.post('https://lovely-jumper-dove.cyclic.app/delete-product', {
+    axios.post('https://ism-project.onrender.com/delete-product', {
       id: id
     }, {
       headers: {
@@ -126,7 +126,7 @@ export default class Dashboard extends Component {
     file.append('discount', this.state.discount);
     file.append('price', this.state.price);
 
-    axios.post('https://lovely-jumper-dove.cyclic.app/add-product', file, {
+    axios.post('https://ism-project.onrender.com/add-product', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -164,7 +164,7 @@ export default class Dashboard extends Component {
     file.append('discount', this.state.discount);
     file.append('price', this.state.price);
 
-    axios.post('https://lovely-jumper-dove.cyclic.app/update-product', file, {
+    axios.post('https://ism-project.onrender.com/update-product', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -441,7 +441,7 @@ export default class Dashboard extends Component {
                   <TableCell align="center" component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="center"><img src={`https://lovely-jumper-dove.cyclic.app/${row.image}`} alt="" width="70" height="70" /></TableCell>
+                  <TableCell align="center"><img src={`https://ism-project.onrender.com/${row.image}`} alt="" width="70" height="70" /></TableCell>
                   <TableCell align="center">{row.desc}</TableCell>
                   <TableCell align="center">{row.price}</TableCell>
                   <TableCell align="center">{row.discount}</TableCell>

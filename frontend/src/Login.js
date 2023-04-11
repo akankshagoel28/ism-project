@@ -24,7 +24,7 @@ export default class Login extends React.Component {
     //   pwd=data.toString();
     // });
     const pwd = sha256(this.state.password).toString();
-    axios.post('https://lovely-jumper-dove.cyclic.app/login', {
+    axios.post('https://ism-project.onrender.com/login', {
       username: this.state.username,
       password: pwd,
     }).then((res) => {

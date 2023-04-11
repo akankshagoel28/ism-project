@@ -20,7 +20,7 @@ export default class Register extends React.Component {
 
   register = () => {
     const pwd = sha256(this.state.password).toString();
-    axios.post('https://lovely-jumper-dove.cyclic.app/register', {
+    axios.post('https://ism-project.onrender.com/register', {
       username: this.state.username,
       password: pwd,
     }).then((res) => {
