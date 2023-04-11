@@ -52,19 +52,13 @@ var upload = multer({
 });
 app.use(cors());
 //serving the frontend
-app.use(express.static(path.join(__dirname, './frontend/build')));
 
 app.use(express.static('uploads'));
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: false
 }));
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, './frontend/build', 'index.html')),
-    function (err) {
-      res.status(500).send(err);
-    }
-});
+
 app.use("/", (req, res, next) => {
   try {
     if (req.path == "/login" || req.path == "/register" || req.path == "/") {
