@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import sha256 from 'crypto-js/sha256';
-import AES from 'crypto-js/aes';
 import swal from 'sweetalert';
 import { Button, TextField, Link } from '@material-ui/core';
 // const spawn = require('child_process').spawn;

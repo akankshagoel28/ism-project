@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import swal from 'sweetalert';
 import { Button, TextField, Link } from '@material-ui/core';
 import sha256 from 'crypto-js/sha256';
-import AES from 'crypto-js/aes';
 // const spawn= require('child_process').spawn;
 const axios = require('axios');
 // var salt = bcrypt.genSaltSync(10);
